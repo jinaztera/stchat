@@ -1,17 +1,16 @@
 import time
 import streamlit as st
 import numpy as np
-import openai
-import os
 from PIL import Image
+import openai
 
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = st.secrets['OPENAI_API_KEY']
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
 
 st.set_page_config(
-    page_title="교실탈출"
+    page_title="흐음음음"
 )
 st.header("금옥여고의 비밀")
 # st.subheader("맛보기")
