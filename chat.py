@@ -5,9 +5,8 @@ import openai
 import os
 from PIL import Image
 
-openai.api_key = "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"
+openai.api_key = os.environ['OPENAI_API_KEY']
 
-a = 0
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
 
@@ -47,8 +46,6 @@ for message in st.session_state.messages[3:]:
 prompt = st.chat_input("what is up?")
 
 valid = True
-
-
 
 if prompt == "1234":
     with st.chat_message("user"):
