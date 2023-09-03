@@ -2,9 +2,9 @@ import time
 import streamlit as st
 import numpy as np
 from PIL import Image
-# import openai
+import openai
 
-openai.api_key = st.secrets['OPENAI_API_KEY']
+openai.api_key = "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"
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
