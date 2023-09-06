@@ -1,10 +1,18 @@
+from dotenv import load_dotenv
+load_dotenv()
+
+
+
 import time
 import streamlit as st
 import numpy as np
 from PIL import Image
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
+
+# from langchain.chat_models import ChatOpenAI
+# chat_model - ChatOpenAI()
 
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo"
@@ -14,6 +22,7 @@ st.set_page_config(
 )
 st.header("금옥여고의 비밀")
 # st.subheader("맛보기")
+
 
 image_path = "chat_image/그래프.png"
 image = Image.open(image_path)

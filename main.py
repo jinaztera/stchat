@@ -1,5 +1,6 @@
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv, dotenv_values
+load_dotenv()
+import os
 # from langchain.llms import OpenAI
 # llm = OpenAI(openai_api_key="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")
 
@@ -7,9 +8,11 @@
 
 # print(result)
 
-from langchain.chat_models import ChatOpenAI
-llm = ChatOpenAI(openai_api_key="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")
+print(os.getenv("OPENAI_API_KEY"))
 
-result = llm.predict("저녁 메뉴 추천해줘")
+# from langchain.chat_models import ChatOpenAI
+# llm = ChatOpenAI()
 
-print(result)
+# result = llm.predict("저녁 메뉴 추천해줘")
+
+# print(result)
